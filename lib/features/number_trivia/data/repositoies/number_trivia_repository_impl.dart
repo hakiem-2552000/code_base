@@ -1,5 +1,4 @@
 import 'package:code_base/core/error/failures.dart';
-import 'package:code_base/core/network/network_infor.dart';
 import 'package:code_base/features/number_trivia/data/datasources/number_trivia_data_source.dart';
 import 'package:code_base/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:code_base/features/number_trivia/domain/repositories/number_trivia_reposioty.dart';
@@ -18,7 +17,7 @@ class NumberTriviaRepositoryImpl extends NumberTriviaRepository {
           await numberTriviaRemoteDataSource.getConcreteNumberTrivia(number);
       return Right(numberTrivia);
     } catch (e) {
-      return Left(ServerFailure());
+      return Left(e as ServerFailure);
     }
   }
 
@@ -29,7 +28,7 @@ class NumberTriviaRepositoryImpl extends NumberTriviaRepository {
           await numberTriviaRemoteDataSource.getRandomNumberTrivia();
       return Right(numberTrivia);
     } catch (e) {
-      return Left(ServerFailure());
+      return Left(e as ServerFailure);
     }
   }
 }

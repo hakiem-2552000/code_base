@@ -19,6 +19,7 @@ class NumberTriviaPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   if (state is Loaded) Text(state.trivia.text),
+                  if (state is Error) Text(state.message),
                   TextButton(
                     onPressed: () {
                       BlocProvider.of<NumberTriviaBloc>(context)

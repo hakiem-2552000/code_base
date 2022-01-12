@@ -1,13 +1,16 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:code_base/core/error/failures.dart';
 import 'package:code_base/core/usecases/usecase.dart';
 import 'package:code_base/core/utils/input_converter.dart';
 import 'package:code_base/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:code_base/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:code_base/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:equatable/equatable.dart';
+
 part 'number_trivia_event.dart';
+
 part 'number_trivia_state.dart';
 
 class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
@@ -31,7 +34,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
           await getTriviaForConcreteNumber.call(Params(number: number));
       // TODO: define common failure message
       failureOrTrivia.fold(
-          (failure) => emit(const Error(message: 'BACK_END_ERROR')),
+          (failure) => emit(Error(message: (failure as ServerFailure).message)),
           (trivia) => emit(
                 Loaded(trivia: trivia),
               ));
