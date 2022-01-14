@@ -1,5 +1,6 @@
 import 'package:code_base/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:code_base/injection_container.dart';
+import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,7 +26,7 @@ class NumberTriviaPage extends StatelessWidget {
                       BlocProvider.of<NumberTriviaBloc>(context)
                           .add(GetTriviaForRandomNumber());
                     },
-                    child: const Text('Check'),
+                    child: const Text('check').tr(),
                   )
                 ],
               ),
