@@ -21,8 +21,8 @@ class NumberTriviaRemoteDataSourceImpl extends NumberTriviaDataSource {
       return NumberTriviaModel.fromJson(response.data);
     } on DioError catch (e, _) {
       return Future.error(e.error as ServerFailure);
-    } on Exception catch (e) {
-      return Future.error(e as ServerFailure);
+    } catch (e) {
+      return Future.error(ServerFailure(e.toString()));
     }
   }
 
@@ -33,8 +33,8 @@ class NumberTriviaRemoteDataSourceImpl extends NumberTriviaDataSource {
       return NumberTriviaModel.fromJson(response.data);
     } on DioError catch (e, _) {
       return Future.error(e.error as ServerFailure);
-    } on Exception catch (e) {
-      return Future.error(e as ServerFailure);
+    } catch (e) {
+      return Future.error(ServerFailure(e.toString()));
     }
   }
 }

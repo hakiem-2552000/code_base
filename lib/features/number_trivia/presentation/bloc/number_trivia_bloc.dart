@@ -50,7 +50,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     try {
       final failureOrTrivia = await getTriviaForRandomNumber.call(NoParam());
       failureOrTrivia.fold(
-          (failure) => emit(const Error(message: 'BACK_END_ERROR')),
+          (failure) => emit(Error(message: (failure as ServerFailure).message)),
           (trivia) => emit(
                 Loaded(trivia: trivia),
               ));
