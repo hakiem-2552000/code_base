@@ -50,24 +50,24 @@ android {
         versionName flutterVersionName
     }
 
-    flavorDimensions "app"
+    flavorDimensions "default"
     productFlavors {
         dev {
-            dimension "app"
+            dimension "default"
             applicationIdSuffix ".dev"
             versionCode 1
             versionName "1.0.0"
         }
 
         stg {
-            dimension "app"
+            dimension "default"
             applicationIdSuffix ".stg"
             versionCode 1
             versionName "1.0.0"
         }
 
         prod {
-            dimension "app"
+            dimension "default"
             applicationIdSuffix ".prod"
             versionCode 1
             versionName "1.0.0"

@@ -1,8 +1,12 @@
-import 'package:code_base/features/number_trivia/presentation/page/number_trivia_page.dart';
+import 'package:code_base/core/routes/app_pages.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   await di.init();
   runApp(const MyApp());
 }
@@ -17,8 +21,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: AppPages.INITIAL,
+      onGenerateRoute: AppPages.onGenerateRoute,
       debugShowCheckedModeBanner: false,
-      home: const NumberTriviaPage(),
     );
   }
 }
