@@ -6,9 +6,9 @@ extension AppLocaleExtension on AppLocale {
   Locale get locale {
     switch (this) {
       case AppLocale.en:
-        return Locale('en', 'US');
+        return const Locale('en', 'US');
       case AppLocale.vi:
-        return Locale('vi', 'VN');
+        return const Locale('vi', 'VN');
     }
   }
 }

@@ -6,6 +6,7 @@ import 'package:dartz/dartz.dart';
 
 class GetRandomNumberTrivia implements UseCase<NumberTrivia, NoParam> {
   final NumberTriviaRepository repository;
+
   const GetRandomNumberTrivia(this.repository);
 
   @override

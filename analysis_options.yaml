@@ -7,35 +7,35 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
-#include: package:flutter_lints/flutter.yaml
+include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
-    # Style rules
-    - prefer_single_quotes
-    - library_names
-    - library_prefixes
-    - non_constant_identifier_names
-    - directives_ordering
-    #      - lines_longer_than_80_chars
-    - curly_braces_in_flow_control_structures
-    - slash_for_doc_comments
-    # Usage rules
-    - prefer_interpolation_to_compose_strings
-    - prefer_collection_literals
-    - avoid_function_literals_in_foreach_calls
-    - avoid_init_to_null
-    - prefer_initializing_formals
-    - type_init_formals
-    - empty_constructor_bodies
-    - empty_statements
-    - unnecessary_new
-    - unnecessary_this
-    - unnecessary_const
-    - unnecessary_overrides
-    - unnecessary_parenthesis
-    - unnecessary_getters_setters
-    #Design rules
-    - avoid_setters_without_getters
-    - avoid_returning_null
-    - avoid_return_types_on_setters
+#    # Style rules
+#    - prefer_single_quotes
+#    - library_names
+#    - library_prefixes
+#    - non_constant_identifier_names
+#    - directives_ordering
+#    #      - lines_longer_than_80_chars
+#    - curly_braces_in_flow_control_structures
+#    - slash_for_doc_comments
+#    # Usage rules
+#    - prefer_interpolation_to_compose_strings
+#    - prefer_collection_literals
+#    - avoid_function_literals_in_foreach_calls
+#    - avoid_init_to_null
+#    - prefer_initializing_formals
+#    - type_init_formals
+#    - empty_constructor_bodies
+#    - empty_statements
+#    - unnecessary_new
+#    - unnecessary_this
+#    - unnecessary_const
+#    - unnecessary_overrides
+#    - unnecessary_parenthesis
+#    - unnecessary_getters_setters
+#    #Design rules
+#    - avoid_setters_without_getters
+#    - avoid_returning_null
+#    - avoid_return_types_on_setters

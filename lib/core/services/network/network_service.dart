@@ -1,10 +1,10 @@
 import 'package:code_base/core/error/failures.dart';
-import 'package:code_base/core/network/network_infor.dart';
 import 'package:code_base/core/utils/flavor_settings.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 import 'network_constants.dart';
+import 'network_infor.dart';
 
 class NetworkService {
   NetworkService({required this.networkInforImplement}) {
@@ -31,8 +31,8 @@ class NetworkService {
         try {
           String? token = '';
 
-          options.headers[AUTHORIZATION] = 'Bearer $token';
-          options.headers[X_SECRET_KEY] =
+          options.headers[authorization] = 'Bearer $token';
+          options.headers[xSecretKey] =
               (await getFlavorSettings()).xSecretKey;
         } on Exception {
           return handler.reject(DioError(

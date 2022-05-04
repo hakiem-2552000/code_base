@@ -1,5 +1,5 @@
 import 'package:code_base/core/error/failures.dart';
-import 'package:code_base/core/network/network_service.dart';
+import 'package:code_base/core/services/network/network_service.dart';
 import 'package:code_base/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:dio/dio.dart';
 

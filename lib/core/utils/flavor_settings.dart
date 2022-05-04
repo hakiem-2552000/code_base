@@ -1,3 +1,4 @@
+//TODO: must move this file to .gitignore
 import 'package:flutter/services.dart';
 
 import 'constants/country_code.dart';
@@ -23,7 +24,7 @@ class FlavorSettings {
     agoraAppID = '  ';
     xSecretKey =
         '51fdfa265d8162cdeca725039bbecdf3df6fec1505d9946a4ad143fb4e01137f';
-    countryCode = COUNTRY_CODE_VN;
+    countryCode = countryCodeVn;
     testPhone = '+84999999999';
     testAccessToken = 'vequeanhdiemaongoaiocachratxabameanhngayxuacungoday';
     testOTP = '999999';
@@ -37,7 +38,7 @@ class FlavorSettings {
     agoraAppID = '  ';
     xSecretKey =
         '51fdfa265d8162cdeca725039bbecdf3df6fec1505d9946a4ad143fb4e01137f';
-    countryCode = COUNTRY_CODE_JP;
+    countryCode = countryCodeJp;
     testPhone = '+81999999999';
     testAccessToken = 'vequeanhdiemaongoaiocachratxabameanhngayxuacungoday';
     testOTP = '999999';
@@ -51,7 +52,7 @@ class FlavorSettings {
     agoraAppID = '  ';
     xSecretKey =
         '51fdfa265d8162cdeca725039bbecdf3df6fec1505d9946a4ad143fb4e01137f';
-    countryCode = COUNTRY_CODE_JP;
+    countryCode = countryCodeJp;
     testPhone = '+81999999999';
     testAccessToken = 'vequeanhdiemaongoaiocachratxabameanhngayxuacungoday';
     testOTP = '999999';

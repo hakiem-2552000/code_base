@@ -12,17 +12,14 @@ RouteName? getRouteName(String? name) {
       return routeName;
     }
   }
+  return null;
 }
 
 extension RouteNameExtension on RouteName {
   String get path {
-    switch (this) {
-      case RouteName.root:
-        return '/';
-      case RouteName.login:
-        return '/login';
-      case RouteName.numberTrivia:
-        return '/number_trivia';
+    if (this == RouteName.root) {
+      return '/';
     }
+    return '/${toString().split('.').last}';
   }
 }

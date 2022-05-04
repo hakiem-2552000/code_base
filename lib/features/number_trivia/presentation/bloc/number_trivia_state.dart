@@ -16,6 +16,7 @@ class Loading extends NumberTriviaState {
 
 class Loaded extends NumberTriviaState {
   final NumberTrivia trivia;
+
   const Loaded({required this.trivia});
 
   @override
@@ -24,6 +25,7 @@ class Loaded extends NumberTriviaState {
 
 class Error extends NumberTriviaState {
   final String message;
+
   const Error({required this.message});
 
   @override

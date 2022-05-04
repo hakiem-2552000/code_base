@@ -5,7 +5,7 @@ part 'route_name.dart';
 
 class AppPages {
   //TODO: replace numberTrivia with another route
-  static final INITIAL = RouteName.numberTrivia.path;
+  static final initial = RouteName.numberTrivia.path;
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     RouteName? routeName = getRouteName(settings.name);

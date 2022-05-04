@@ -6,7 +6,7 @@ part 'app_locale.dart';
 const path = 'assets/translations';
 
 class AppLocalization extends StatelessWidget {
-  AppLocalization({required this.child});
+  const AppLocalization({Key? key, required this.child}) : super(key: key);
 
   final Widget child;
 
